@@ -1,0 +1,47 @@
+-- le routeur principal --
+
+enable
+configure terminal
+spanning-tree mode pvst
+
+spanning-tree vlan 10 priority 4096
+spanning-tree vlan 20 priority 4096
+spanning-tree vlan 30 priority 4096
+spanning-tree vlan 40 priority 4096
+spanning-tree vlan 41 priority 4096
+spanning-tree vlan 42 priority 4096
+spanning-tree vlan 50 priority 4096
+spanning-tree vlan 60 priority 4096
+spanning-tree vlan 70 priority 4096
+spanning-tree vlan 80 priority 4096
+spanning-tree vlan 90 priority 4096
+spanning-tree vlan 100 priority 4096
+spanning-tree vlan 21 priority 4096
+spanning-tree vlan 110 priority 4096
+
+exit
+exit
+
+-- tout les autres routeurs --
+
+enable
+configure terminal
+spanning-tree mode pvst
+
+spanning-tree vlan 10
+spanning-tree vlan 20
+spanning-tree vlan 30
+spanning-tree vlan 40
+spanning-tree vlan 41
+spanning-tree vlan 42
+spanning-tree vlan 50
+spanning-tree vlan 60
+spanning-tree vlan 70
+spanning-tree vlan 80
+spanning-tree vlan 90
+spanning-tree vlan 100
+spanning-tree vlan 21
+spanning-tree vlan 110
+
+exit
+exit
