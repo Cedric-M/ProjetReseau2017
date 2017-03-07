@@ -1,14 +1,42 @@
--- le routeur principal --
+
+-- switch 2 --
+- le switch 2 va prendre en charge le VLAN 10,40,41
 
 enable
 configure terminal
 spanning-tree mode pvst
 
 spanning-tree vlan 10 priority 4096
-spanning-tree vlan 20 priority 4096
-spanning-tree vlan 30 priority 4096
+spanning-tree vlan 20 priority 32768
+spanning-tree vlan 30 priority 32768
 spanning-tree vlan 40 priority 4096
 spanning-tree vlan 41 priority 4096
+spanning-tree vlan 42 priority 32768
+spanning-tree vlan 50 priority 32768
+spanning-tree vlan 60 priority 32768
+spanning-tree vlan 70 priority 32768
+spanning-tree vlan 80 priority 32768
+spanning-tree vlan 90 priority 32768
+spanning-tree vlan 100 priority 32768
+spanning-tree vlan 21 priority 32768
+spanning-tree vlan 110 priority 32768
+
+exit
+exit
+
+
+-- switch 1 ---
+- le switch 1 va prendre en charge tout le resee
+
+enable
+configure terminal
+spanning-tree mode pvst
+
+spanning-tree vlan 10 priority 32768
+spanning-tree vlan 20 priority 4096
+spanning-tree vlan 30 priority 4096
+spanning-tree vlan 40 priority 32768
+spanning-tree vlan 41 priority 32768
 spanning-tree vlan 42 priority 4096
 spanning-tree vlan 50 priority 4096
 spanning-tree vlan 60 priority 4096
