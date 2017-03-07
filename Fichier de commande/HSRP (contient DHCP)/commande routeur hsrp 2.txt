@@ -1,0 +1,202 @@
+en
+conf t
+interface g0/2
+no shutdown
+exit
+
+ip dhcp excluded-address 192.168.0.254
+ip dhcp excluded-address 192.168.0.252
+ip dhcp excluded-address 192.168.0.253
+ip dhcp excluded-address 192.168.1.30
+ip dhcp excluded-address 192.168.1.28
+ip dhcp excluded-address 192.168.1.29
+ip dhcp excluded-address 192.168.1.62
+ip dhcp excluded-address 192.168.1.60
+ip dhcp excluded-address 192.168.1.61
+ip dhcp excluded-address 192.168.1.94
+ip dhcp excluded-address 192.168.1.92
+ip dhcp excluded-address 192.168.1.93
+ip dhcp excluded-address 192.168.1.126
+ip dhcp excluded-address 192.168.1.124
+ip dhcp excluded-address 192.168.1.125
+ip dhcp excluded-address 192.168.1.158
+ip dhcp excluded-address 192.168.1.156
+ip dhcp excluded-address 192.168.1.157
+ip dhcp excluded-address 192.168.1.190
+ip dhcp excluded-address 192.168.1.188
+ip dhcp excluded-address 192.168.1.189
+ip dhcp excluded-address 192.168.1.222
+ip dhcp excluded-address 192.168.1.220
+ip dhcp excluded-address 192.168.1.221
+ip dhcp excluded-address 192.168.1.254
+ip dhcp excluded-address 192.168.1.252
+ip dhcp excluded-address 192.168.1.253
+ip dhcp excluded-address 192.168.2.30
+ip dhcp excluded-address 192.168.2.28
+ip dhcp excluded-address 192.168.2.29
+ip dhcp excluded-address 192.168.2.62
+ip dhcp excluded-address 192.168.2.60
+ip dhcp excluded-address 192.168.2.61
+ip dhcp excluded-address 192.168.2.78
+ip dhcp excluded-address 192.168.2.76
+ip dhcp excluded-address 192.168.2.77
+ip dhcp excluded-address 192.168.2.94
+ip dhcp excluded-address 192.168.2.92
+ip dhcp excluded-address 192.168.2.93
+ip dhcp excluded-address 192.168.2.110
+ip dhcp excluded-address 192.168.2.108
+ip dhcp excluded-address 192.168.2.109
+
+interface g0/2.1
+encapsulation dot1Q 10
+ip address 192.168.0.253 255.255.255.0
+standby 1 ip 192.168.0.254
+standby 1 preempt
+no shutdown
+ip dhcp pool vlan10
+network 192.168.0.0 255.255.255.0
+default-router 192.168.0.254
+exit
+
+interface g0/2.2
+encapsulation dot1Q 20
+ip address 192.168.1.29 255.255.255.224
+standby 2 ip 192.168.1.30
+standby 2 preempt
+no shutdown
+ip dhcp pool vlan20
+network 192.168.1.0 255.255.255.224
+default-router 192.168.1.30
+exit
+
+interface g0/2.3
+encapsulation dot1Q 30
+ip address 192.168.1.61 255.255.255.224
+standby 3 ip 192.168.1.62
+standby 3 preempt
+no shutdown
+ip dhcp pool vlan30
+network 192.168.1.32 255.255.255.224
+default-router 192.168.1.62
+exit
+
+interface g0/2.4
+encapsulation dot1Q 40
+ip address 192.168.1.93 255.255.255.224
+standby 4 ip 192.168.1.94
+standby 4 preempt
+no shutdown
+ip dhcp pool vlan40
+network 192.168.1.64 255.255.255.224
+default-router 192.168.1.94
+exit
+
+interface g0/2.5
+encapsulation dot1Q 41
+ip address 192.168.1.125 255.255.255.224
+standby 5 ip 192.168.1.126
+standby 5 preempt
+no shutdown
+ip dhcp pool vlan41
+network 192.168.1.96 255.255.255.224
+default-router 192.168.1.126
+exit
+
+interface g0/2.6
+encapsulation dot1Q 42
+ip address 192.168.1.157 255.255.255.224
+standby 6 ip 192.168.1.158
+standby 6 preempt
+no shutdown
+ip dhcp pool vlan42
+network 192.168.1.128 255.255.255.224
+default-router 192.168.1.158
+exit
+
+interface g0/2.7
+encapsulation dot1Q 50
+ip address 192.168.1.189 255.255.255.224
+standby 7 ip 192.168.1.190
+standby 7 preempt
+no shutdown
+ip dhcp pool vlan50
+network 192.168.1.168 255.255.255.224
+default-router 192.168.1.190
+exit
+
+interface g0/2.8
+encapsulation dot1Q 60
+ip address 192.168.1.221 255.255.255.224
+standby 8 ip 192.168.1.222
+standby 8 preempt
+no shutdown
+ip dhcp pool vlan60
+network 192.168.1.192 255.255.255.224
+default-router 192.168.1.222
+exit
+
+interface g0/2.9
+encapsulation dot1Q 70
+ip address 192.168.1.253 255.255.255.224
+standby 9 ip 192.168.1.254
+standby 9 preempt
+no shutdown
+ip dhcp pool vlan70
+network 192.168.1.224 255.255.255.224
+default-router 192.168.1.254
+exit
+
+interface g0/2.10
+encapsulation dot1Q 80
+ip address 192.168.2.29 255.255.255.224
+standby 10 ip 192.168.2.30
+standby 10 preempt
+no shutdown
+ip dhcp pool vlan80
+network 192.168.2.0 255.255.255.224
+default-router 192.168.2.30
+exit
+
+interface g0/2.11
+encapsulation dot1Q 90
+ip address 192.168.2.61 255.255.255.224
+standby 11 ip 192.168.2.62
+standby 11 preempt
+no shutdown
+ip dhcp pool vlan90
+network 192.168.2.32 255.255.255.224
+default-router 192.168.2.62
+exit
+
+interface g0/2.12
+encapsulation dot1Q 100
+ip address 192.168.2.77 255.255.255.240
+standby 12 ip 192.168.2.78
+standby 12 preempt
+no shutdown
+ip dhcp pool vlan100
+network 192.168.2.64 255.255.255.240
+default-router 192.168.2.78
+exit
+
+interface g0/2.13
+encapsulation dot1Q 21
+ip address 192.168.2.93 255.255.255.240
+standby 13 ip 192.168.2.94
+standby 13 preempt
+no shutdown
+ip dhcp pool vlan21
+network 192.168.2.80 255.255.255.240
+default-router 192.168.2.94
+exit
+
+interface g0/2.14
+encapsulation dot1Q 110
+ip address 192.168.2.109 255.255.255.0
+standby 14 ip 192.168.2.110
+standby 14 preempt
+no shutdown
+ip dhcp pool vlan110
+network 192.168.2.96 255.255.255.240
+default-router 192.168.2.110
+exit

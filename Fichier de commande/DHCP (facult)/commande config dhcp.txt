@@ -1,0 +1,99 @@
+ip dhcp excluded-address 192.168.0.254
+ip dhcp excluded-address 192.168.0.252
+ip dhcp excluded-address 192.168.0.253
+ip dhcp excluded-address 192.168.1.30
+ip dhcp excluded-address 192.168.1.28
+ip dhcp excluded-address 192.168.1.29
+ip dhcp excluded-address 192.168.1.62
+ip dhcp excluded-address 192.168.1.60
+ip dhcp excluded-address 192.168.1.61
+ip dhcp excluded-address 192.168.1.94
+ip dhcp excluded-address 192.168.1.92
+ip dhcp excluded-address 192.168.1.93
+ip dhcp excluded-address 192.168.1.126
+ip dhcp excluded-address 192.168.1.124
+ip dhcp excluded-address 192.168.1.125
+ip dhcp excluded-address 192.168.1.158
+ip dhcp excluded-address 192.168.1.156
+ip dhcp excluded-address 192.168.1.157
+ip dhcp excluded-address 192.168.1.190
+ip dhcp excluded-address 192.168.1.188
+ip dhcp excluded-address 192.168.1.189
+ip dhcp excluded-address 192.168.1.222
+ip dhcp excluded-address 192.168.1.220
+ip dhcp excluded-address 192.168.1.221
+ip dhcp excluded-address 192.168.1.254
+ip dhcp excluded-address 192.168.1.252
+ip dhcp excluded-address 192.168.1.253
+ip dhcp excluded-address 192.168.2.30
+ip dhcp excluded-address 192.168.2.28
+ip dhcp excluded-address 192.168.2.29
+ip dhcp excluded-address 192.168.2.62
+ip dhcp excluded-address 192.168.2.60
+ip dhcp excluded-address 192.168.2.61
+ip dhcp excluded-address 192.168.2.78
+ip dhcp excluded-address 192.168.2.76
+ip dhcp excluded-address 192.168.2.77
+ip dhcp excluded-address 192.168.2.94
+ip dhcp excluded-address 192.168.2.92
+ip dhcp excluded-address 192.168.2.93
+ip dhcp excluded-address 192.168.2.110
+ip dhcp excluded-address 192.168.2.108
+ip dhcp excluded-address 192.168.2.109
+
+	ip dhcp pool vlan10
+	network 192.168.0.0 255.255.255.0
+	default-router 192.168.0.254
+	exit
+	ip dhcp pool vlan20
+	network 192.168.1.0 255.255.255.224
+	default-router 192.168.1.30
+	exit
+	ip dhcp pool vlan30
+	network 192.168.1.32 255.255.255.224
+	default-router 192.168.1.62
+	exit
+	ip dhcp pool vlan40
+	network 192.168.1.64 255.255.255.224
+	default-router 192.168.1.94
+	exit
+	ip dhcp pool vlan41
+	network 192.168.1.96 255.255.255.224
+	default-router 192.168.1.126
+	exit
+	ip dhcp pool vlan42
+	network 192.168.1.128 255.255.255.224
+	default-router 192.168.1.158
+	exit
+	ip dhcp pool vlan50
+	network 192.168.1.168 255.255.255.224
+	default-router 192.168.1.190
+	exit
+	ip dhcp pool vlan60
+	network 192.168.1.192 255.255.255.224
+	default-router 192.168.1.222
+	exit
+	ip dhcp pool vlan70
+	network 192.168.1.224 255.255.255.224
+	default-router 192.168.1.254
+	exit
+	ip dhcp pool vlan80
+	network 192.168.2.0 255.255.255.224
+	default-router 192.168.2.30
+	exit
+	ip dhcp pool vlan90
+	network 192.168.2.32 255.255.255.224
+	default-router 192.168.2.62
+	exit
+	ip dhcp pool vlan100
+	network 192.168.2.64 255.255.255.240
+	default-router 192.168.2.78
+	exit
+	ip dhcp pool vlan21
+	network 192.168.2.80 255.255.255.240
+	default-router 192.168.2.94
+	exit
+ip dhcp pool vlan110
+network 192.168.2.96 255.255.255.240
+default-router 192.168.2.110
+exit

@@ -1,0 +1,75 @@
+vlan 10
+name ServiceR&D
+exit
+vlan 20
+name Direction
+exit
+vlan 30
+name Imprimante
+exit
+vlan 40
+name ServiceITDeveloppement
+exit
+vlan 41
+name ServiceITInstructure
+exit
+vlan 42
+name ServiceITSupport
+exit
+vlan 50
+name ServiceLogistique
+exit
+vlan 60
+name ServiceSecretariat
+exit
+vlan 70
+name ServiceCommunication
+exit
+vlan 80
+name ServiceSupportClient
+exit
+vlan 90
+name Maintenance
+exit
+vlan 100
+name ServiceCompabilité
+exit
+vlan 21
+name SecretariatDirection
+exit
+vlan 110
+name ServiceRH
+exit
+
+interface fa0/4
+switchport mode trunk
+switchport trunk allowed vlan all
+no shutdown
+exit
+
+interface fa0/6
+switchport mode trunk
+switchport trunk allowed vlan all
+no shutdown
+exit
+
+interface fa0/1
+switchport mode trunk
+switchport trunk allowed vlan all
+no shutdown
+exit
+
+interface fa0/8
+switchport access vlan 10
+no shutdown
+exit
+
+interface fa0/9
+switchport access vlan 10
+no shutdown
+exit
+
+interface fa0/10
+switchport access vlan 30
+no shutdown
+exit
