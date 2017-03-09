@@ -1,0 +1,3 @@
+ip access-list extended internet
+permit ip any 192.168.0.0 0.0.2.111
+deny ip any any
