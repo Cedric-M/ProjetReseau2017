@@ -1,0 +1,64 @@
+interface g0/2.1
+ip dhcp pool vlan10
+dns-server 192.168.2.117
+exit
+
+interface g0/2.2
+ip dhcp pool vlan20
+dns-server 192.168.2.117
+exit
+
+interface g0/2.3
+ip dhcp pool vlan30
+dns-server 192.168.2.117
+exit
+
+interface g0/2.4
+ip dhcp pool vlan40
+dns-server 192.168.2.117
+exit
+
+interface g0/2.5
+ip dhcp pool vlan41
+dns-server 192.168.2.117
+exit
+
+interface g0/2.6
+ip dhcp pool vlan42
+dns-server 192.168.2.117
+exit
+
+interface g0/2.7
+ip dhcp pool vlan50
+dns-server 192.168.2.117
+exit
+
+interface g0/2.8
+ip dhcp pool vlan60
+dns-server 192.168.2.117
+exit
+
+interface g0/2.9
+ip dhcp pool vlan70
+dns-server 192.168.2.117
+exit
+
+interface g0/2.10
+ip dhcp pool vlan80
+dns-server 192.168.2.117
+exit
+
+interface g0/2.12
+ip dhcp pool vlan100
+dns-server 192.168.2.117
+exit
+
+interface g0/2.13
+ip dhcp pool vlan21
+dns-server 192.168.2.117
+exit
+
+interface g0/2.14
+ip dhcp pool vlan110
+dns-server 192.168.2.117
+exit

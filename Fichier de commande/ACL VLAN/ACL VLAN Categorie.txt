@@ -1,0 +1,24 @@
+Service R&D			10
+Direction			20
+Imprimante			30
+Service IT:développement	40
+Service IT:Infrastr		41
+Service IT:Support		42
+Service Logistiques		50
+Service Secretariat		60
+Service Communication		70
+Service Support Client		80
+Maintenance			90
+Service Comptabilité		100
+Secretariat de direction	21
+Service RH			110
+ServerFTPinfo			*
+ServerFTP R&D			*
+Route1				*
+Route2				*
+Lookback			*
+SMTP
+SMTP
+SMTP
+DHCP
+DHCP
