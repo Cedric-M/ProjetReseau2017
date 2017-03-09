@@ -1,0 +1,15 @@
+router1: 192.168.2.33
+router2: 192.168.2.34
+switch1-BO0: 192.168.2.41
+switch2-BO0: 192.168.2.42
+switch1-BO1: 192.168.2.43
+switch1-BO2: 192.168.2.44
+
+switch1-BP0: 192.168.2.45
+switch1-BP1: 192.168.2.46
+switch1-BP2: 192.168.2.47
+switch2-BP0: 192.168.2.48
+switch1-BE0: 192.168.2.51
+switch2-BE0: 192.168.2.52
+switch1-BE1: 192.168.2.53
+switch1-BE2: 192.168.2.54

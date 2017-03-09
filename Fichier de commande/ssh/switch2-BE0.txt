@@ -1,0 +1,31 @@
+!switch2-BE0
+
+enable
+configure terminal
+
+ip address 192.168.2.42 255.255.255.224
+
+line vty 0 15
+transport input ssh
+password motd
+login
+end
+configure terminal
+enable password secret
+
+hostname router1
+ip domain name ipdomain
+crypto key generate rsa
+1024
+
+ip ssh version 2
+line vty 0 15
+transport input ssh
+
+username random secret motd
+line vty 0 15
+login local
+
+exit
+exit
+exit
