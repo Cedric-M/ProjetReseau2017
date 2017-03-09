@@ -1,5 +1,5 @@
 ip access-list extended Imprim
 deny tcp any any eq 22
-permit tcp any any eq 68
-permit tcp any any eq 67
+permit udp any any eq 68
+permit udp any any eq 67
 deny ip any any

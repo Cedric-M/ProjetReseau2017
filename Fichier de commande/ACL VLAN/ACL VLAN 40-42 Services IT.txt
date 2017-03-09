@@ -10,8 +10,8 @@ permit tcp any 192.168.2.132 0.0.0.3 eq 22
 permit tcp any any eq 25
 permit tcp any any eq 587
 permit tcp any any eq 465
-permit tcp any any eq 68
-permit tcp any any eq 67
+permit udp any any eq 68
+permit udp any any eq 67
 permit ip any 192.168.1.32 0.0.0.21
 permit ip any 192.168.2.136 0.0.0.3
 permit ip any host 192.168.2.117
