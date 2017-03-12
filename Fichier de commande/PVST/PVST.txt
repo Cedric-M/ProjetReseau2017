@@ -1,0 +1,35 @@
+
+-- switch 2 --
+- le switch 2 va prendre en charge le VLAN 10,40,41
+
+
+spanning-tree mode pvst
+
+spanning-tree vlan 10,40,41 priority 4096
+spanning-tree vlan 20,21,30,42,50,60,70,80,90,100,110 priority 32768
+end
+
+
+
+-- switch 1 ---
+- le switch 1 va prendre en charge les vlans restants
+
+enable
+configure terminal
+spanning-tree mode pvst
+
+spanning-tree vlan 10,41,42 priority 32768
+spanning-tree vlan 20,21,30,42,50,60,70,80,90,100,110 priority 4096
+end
+
+
+-- tout les autres routeurs --
+
+enable
+configure terminal
+spanning-tree mode pvst
+
+spanning-tree vlan 10,20,21,30,40,41,42,50,60,70,80,90,100,110
+end
+
+show spanning-tree vlan 4
